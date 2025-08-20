@@ -1,0 +1,15 @@
+hey guys Yogeshkumar A. patel here
+i tried to make solar tracker based on accelerometer (my work on magnetometer still in progress)
+over all it is my master's report on my work of 12 months (obviously i did not work contineously as i studied). I personally used lot's of the sensors ,motors , modules ,boards my report of my project is not just how i make it all but also why make it with that component .
+
+let's set it up!!!
+
+1) take one arduino as shown in image here we use arduino as a mster which get the data using uart from raspberry pi pico (data means outout of the solar tracker algorithm inthe form of azuimuth and elevation  ) and using the data of the accelerometer it gives us the pitch roll which we can take as the azimuth and elevation after giving some of the calibration ....
+here pitch and roll gives us two kind of banifites 1st is the we can know the data of the where the sun is and second is about to make the whole system stable ( gimbal ) here we can add gyroscope also but over all the data fusion given by that system will be more accurate as well as complex which directly affects over response time of overall system. here we use very low power boards so over all our power consumption will be lesser but it comes with certain limitation of computation power .
+
+2)do  the same thing with the raspberry pi pico 2040 (please make sure that rspberry pi pico had all necessarry files ) check all files and collection use fake files to check the code and result you can compare the result with the website "https://gml.noaa.gov/grad/solcalc/" (the algorithm thanks to this web site "https://levelup.gitconnected.com/python-sun-position-for-solar-energy-and-research-7a4ead801777")
+
+3)i intigrate gps with that system and communicate with uart please make sure that i choose pins according to my boards please make sure the discription of your board and connect the pin accordingly.
+
+4) calibration of the whole system can be achived by set the both motors at 0 angle and mke them to look at the north direction we also need to check that sensor should mount on the right way 
+
